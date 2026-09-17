@@ -352,7 +352,7 @@ def flight_agent(state: TravelState):
         flight_data = f"Flight information unavailable: {exc}"
 
     return {
-        "flight_results": flight_data,
+        # "flight_results": flight_data,
         "messages": [AIMessage(content="Flight recommendations generated")],
         "llm_calls": state.get("llm_calls", 0) + 1,
     }
